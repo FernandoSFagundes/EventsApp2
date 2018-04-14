@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor= "let x of events" (click)="goToEvent(x.id)">
+    <img [src]="x.picture" alt="x.about">
+    <ion-card-content>
+      <ion-title>{{x.title}}</ion-title>
+      <p>{{x.about}}, {{x.state}}</p>
+      <p>{{x.date}}</p>
+    </ion-card-content>
+
+  </ion-card>
+</ion-content>
